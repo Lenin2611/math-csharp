@@ -459,7 +459,7 @@ internal class Program
                                         break;
                                     default:
                                         Console.Clear();
-                                        Console.Write("Invalid option. . .\nPress Enter to continue. . . ");
+                                        Console.Write("Invalid option. \nPress Enter to continue. . . ");
                                         Console.ReadKey();
                                         Console.Clear();
                                         break;
@@ -469,7 +469,7 @@ internal class Program
                         else
                         {
                             Console.Clear();
-                            Console.Write("Invalid id. . .\nPress Enter to continue. . . ");
+                            Console.Write("Invalid id. \nPress Enter to continue. . . ");
                             Console.ReadKey();
                             Console.Clear();
                         }
@@ -477,34 +477,43 @@ internal class Program
                     case "2":
                         Console.WriteLine("+-----------------+------------------------------------------+------------------------------------------+------+--------------------------------+");
                         Console.WriteLine("| {0,-15} | {1,-40} | {2,-40} | {3,-4} | {4,-30} |", "ID", "NAME", "EMAIL", "AGE", "ADDRESS");
-                        Console.WriteLine("+-----------------+------------------------------------------+------------------------------------------+------+--------------------------------+");
-                        string x;
                         for (int i = 0; i < listStudents.Count; i++)
                         {
-                            Console.WriteLine("| {0,-15} | {1,-40} | {2,-40} | {3,-4} | {4,-30} |", listStudents[i].Id, listStudents[i].Name, listStudents[i].Email, listStudents[i].Age, listStudents[i].Address);
+                            string iString = i.ToString();
+                            char lastDigit = iString[iString.Length-1];
                             Console.WriteLine("+-----------------+------------------------------------------+------------------------------------------+------+--------------------------------+");
-                            x = Convert.ToString(i);
-                            if (x[x.Length - 1].Equals("9"))
-                            {
-                                Console.Write("Press Enter to continue. . . ");
+                            Console.WriteLine("| {0,-15} | {1,-40} | {2,-40} | {3,-4} | {4,-30} |", listStudents[i].Id, listStudents[i].Name, listStudents[i].Email, listStudents[i].Age, listStudents[i].Address);
+                            if (lastDigit == '9'){
+                                Console.Write("\nPress Enter to continue. . . ");
                                 Console.ReadKey();
+                                Console.WriteLine("");
                             }
                         }
+                        Console.WriteLine("+-----------------+------------------------------------------+------------------------------------------+------+--------------------------------+");
                         Console.Write("\nPress Enter to continue. . . ");
                         Console.ReadKey();
+                        Console.Clear();
                         loopStudent = false;
                         break;
                     case "3":
                         Console.WriteLine("+-----------------+------------------------------------------+-------------------------------------------+------------------------------------------------------+");
                         Console.WriteLine("| {0,-15} | {1,-40} | {2,-41} | {3,-19} | {4,-30} |", "ID", "NAME", "QUIZES", "WORKS", "ASSESSMENTS");
-                        Console.WriteLine("+-----------------+------------------------------------------+----------+----------+----------+----------+----------+----------+----------+----------+----------+");
                         for (int i = 0; i < listStudents.Count; i++)
                         {
-                            Console.WriteLine("| {0,-15} | {1,-40} | {2,-8} | {3,-8} | {4,-8} | {5,-8} | {6,-8} | {7,-8} | {8,-8} | {9,-8} | {10,-8} |", listStudents[i].Id, listStudents[i].Name, listStudents[i].Quiz[0], listStudents[i].Quiz[1], listStudents[i].Quiz[2], listStudents[i].Quiz[3], listStudents[i].Work[0], listStudents[i].Work[1], listStudents[i].Assessment[0], listStudents[i].Assessment[1], listStudents[i].Assessment[2]);
+                            string iString = i.ToString();
+                            char lastDigit = iString[iString.Length-1];
                             Console.WriteLine("+-----------------+------------------------------------------+----------+----------+----------+----------+----------+----------+----------+----------+----------+");
+                            Console.WriteLine("| {0,-15} | {1,-40} | {2,-8} | {3,-8} | {4,-8} | {5,-8} | {6,-8} | {7,-8} | {8,-8} | {9,-8} | {10,-8} |", listStudents[i].Id, listStudents[i].Name, listStudents[i].Quiz[0], listStudents[i].Quiz[1], listStudents[i].Quiz[2], listStudents[i].Quiz[3], listStudents[i].Work[0], listStudents[i].Work[1], listStudents[i].Assessment[0], listStudents[i].Assessment[1], listStudents[i].Assessment[2]);
+                            if (lastDigit == '9'){
+                                Console.Write("\nPress Enter to continue. . . ");
+                                Console.ReadKey();
+                                Console.WriteLine("");
+                            }
                         }
+                        Console.WriteLine("+-----------------+------------------------------------------+----------+----------+----------+----------+----------+----------+----------+----------+----------+");
                         Console.Write("\nPress Enter to continue. . . ");
                         Console.ReadKey();
+                        Console.Clear();
                         loopStudent = false;
                         break;
                     case "4":
@@ -517,14 +526,22 @@ internal class Program
                         }
                         Console.WriteLine("+-----------------+------------------------------------------+--------------------------------------------+-------+");
                         Console.WriteLine("| {0,-15} | {1,-40} | {2,-10} | {3,-10} | {4,-16} | {5,-5} |", "ID", "NAME", "FINAL QUIZ", "FINAL WORK", "FINAL ASSESSMENT", "FINAL");
-                        Console.WriteLine("+-----------------+------------------------------------------+------------+------------+------------------+-------+");
                         for (int i = 0; i < listStudents.Count; i++)
                         {
-                            Console.WriteLine("| {0,-15} | {1,-40} | {2,-10} | {3,-10} | {4,-16} | {5,-5} |", listStudents[i].Id, listStudents[i].Name, listStudents[i].FinalQuiz, listStudents[i].FinalWork, listStudents[i].FinalAssessment, listStudents[i].Final);
+                            string iString = i.ToString();
+                            char lastDigit = iString[iString.Length-1];
                             Console.WriteLine("+-----------------+------------------------------------------+------------+------------+------------------+-------+");
+                            Console.WriteLine("| {0,-15} | {1,-40} | {2,-10} | {3,-10} | {4,-16} | {5,-5} |", listStudents[i].Id, listStudents[i].Name, listStudents[i].FinalQuiz, listStudents[i].FinalWork, listStudents[i].FinalAssessment, listStudents[i].Final);
+                            if (lastDigit == '9'){
+                                Console.Write("\nPress Enter to continue. . . ");
+                                Console.ReadKey();
+                                Console.WriteLine("");
+                            }
                         }
+                        Console.WriteLine("+-----------------+------------------------------------------+------------+------------+------------------+-------+");
                         Console.Write("\nPress Enter to continue. . . ");
                         Console.ReadKey();
+                        Console.Clear();
                         loopStudent = false;
                         break;
                     case "0":
@@ -534,7 +551,7 @@ internal class Program
                         break;
                     default:
                         Console.Clear();
-                        Console.Write("Invalid option. . .\nPress Enter to continue. . . ");
+                        Console.Write("Invalid option. \nPress Enter to continue. . . ");
                         Console.ReadKey();
                         loopStudent = false;
                         break;
