@@ -87,17 +87,17 @@ public class Student
     }
     public Student(string id, string name, string email, int age, string address, List<int> quiz, List<int> work, List<int> assessment, double finalQuiz, double finalWork, double finalAssessment, double final)
     {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.age = age;
-        this.address = address;
-        this.quiz = quiz;
-        this.work = work;
-        this.assessment = assessment;
-        this.finalQuiz = finalQuiz;
-        this.finalWork = finalWork;
-        this.finalAssessment = finalAssessment;
-        this.final = final;
+        this.Id = id;
+        this.Name = name;
+        this.Email = email;
+        this.Age = age;
+        this.Address = address;
+        this.Quiz = quiz;
+        this.Work = work;
+        this.Assessment = assessment;
+        this.FinalQuiz = finalQuiz;
+        this.FinalWork = finalWork;
+        this.FinalAssessment = finalAssessment;
+        this.Final = final;
     }
 }
